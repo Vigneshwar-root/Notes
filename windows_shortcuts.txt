@@ -1,0 +1,3 @@
+Windows Shortcuts:
+
+Windows + shift + s - To take screenshot and sve it in clipboard so that we can paste in any application

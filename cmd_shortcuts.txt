@@ -1,0 +1,3 @@
+
+
+echo . > filename.extension -> To create a new empty file in windows

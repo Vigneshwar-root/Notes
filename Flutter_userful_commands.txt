@@ -1,0 +1,20 @@
+Flutter:
+
+flutter create . -> will create/repair the missing folders or files in flutter application 
+
+flutter create new_app -> Use _ for the flutter project name and this command is used to create a new flutter app
+
+flutter pub add google_fonts -> Command to install this package in flutter 
+
+Note:  Click on Privacy & Security and after, click on for developers option. so that the dependencies will be reflected.
+
+
+
+ctr + . -> VS code shortcut to get quick suggestions 
+
+Alt+Shift+f -> Format code in VS Code editor (Trailing commas will have more effect on this)
+
+Alt + Shift + o -> to remove unused imports 
+
+
+dart pub add transparent_image -> Command to install transparent_image package -> gives us dummy image which we can use as a placeholder

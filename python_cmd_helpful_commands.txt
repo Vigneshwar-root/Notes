@@ -1,8 +1,13 @@
 echo > requirements.txt
 
+//pip install if it does not reflect in virtual environment
+python -m pip install selenium
+py -3 -m pip install selenium
+
 // Install all the pip installations in one shot
 
 pip install -r requirements.txt
+py -3 -m pip install -r requirements.txt
 
 //requirements text file example 
 

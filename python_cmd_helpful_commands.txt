@@ -1,4 +1,4 @@
-
+echo > requirements.txt
 
 // Install all the pip installations in one shot
 

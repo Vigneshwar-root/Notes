@@ -22,3 +22,5 @@ Creating virtual environment in python
 py -3 -m venv myenv
 
 myenv\Scripts\activate - in windows
+myenv\Scripts\activate.bat - activate
+deactivate - to close the session of virtual environment

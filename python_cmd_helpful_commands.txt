@@ -24,3 +24,11 @@ py -3 -m venv myenv
 myenv\Scripts\activate - in windows
 myenv\Scripts\activate.bat - activate
 deactivate - to close the session of virtual environment
+
+
+
+colorgram.py - python library that lets you extract colors from images 
+  import colorgram
+
+  # To extract 6 colors from an image 
+  colors = colorgram.extract('sweet_pic.jpg',6)

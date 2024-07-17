@@ -1,0 +1,36 @@
+Cyber Security Important links:
+
+Virtual Hardisk or Virtual image:
+
+	https://www.debian.org/distrib/netinst#smallcd - debian iso image download  -- (Digital version of Physical CD's in form of ISO )
+
+	Another form is premade virtual disk (.ova format)
+	
+	https://www.osboxes.org/vmware-images/ - for linux and linux related OS
+	
+	Note: Remember these are not trusted environment as someone is built this virtual environment 
+			We are using them for testing and for learning
+
+
+
+https://bugmenot.com/
+
+
+https://www.urlvoid.com/ - Domain Reputation API 
+
+******************************************************************************
+
+Windows Commands - (Hardware info) 
+
+wmic bios get name, serialnumber, version
+
+wmic csproduct get name, identifyingnumber, uuid (unique id)
+
+dir - serial no of hard drive 
+
+wmic diskdrive - try this command as well for drive related info 
+
+wmic diskdrive get serialnumber - to get specific info here serial number of the drive 
+
+
+

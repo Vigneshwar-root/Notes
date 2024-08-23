@@ -1,0 +1,4 @@
+
+Ctrl + Shift + N - Shortcut command to open specific file name search in IntelliJ
+
+Ctrl + Alt + Shift + s - To view project settings and project structure

@@ -16,7 +16,7 @@ Alt+Shift+f -> Format code in VS Code editor (Trailing commas will have more eff
 
 Alt + Shift + o -> to remove unused imports 
 
-
+flutter pub add transparent_image 
 dart pub add transparent_image -> Command to install transparent_image package -> gives us dummy image which we can use as a placeholder
 
 ******************************************************************************************************************************

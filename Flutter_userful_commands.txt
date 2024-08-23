@@ -18,3 +18,86 @@ Alt + Shift + o -> to remove unused imports
 
 
 dart pub add transparent_image -> Command to install transparent_image package -> gives us dummy image which we can use as a placeholder
+
+******************************************************************************************************************************
+
+Flutter Basics:
+
+
+Flutter:
+
+Material Design - 
+
+	Google's Flexible design system
+	
+	A set of suggestions, rules and guidelines that help you build beautiful user interfaces
+	Highly customizable and extendable 
+	
+	
+	
+	flutter config --android-studio-dir ""
+	
+
+flutter create . -> will create/repair the missing folders or files in flutter application 
+	
+	
+Flutter Apps:
+	main() function gets executed automatically 
+			By dart, when executing the compiled app on the target device 
+	
+	runApp() should be called inside of main() 
+			runApp() "tells" flutter what to display on the screen (i.e which UI elements to display)
+			
+
+
+	pass the to be displayed "widget-tree" to runApp()
+			
+			
+
+	use const with the constructor to improve performance
+		const helps Dart optimize run time performance
+
+
+	Dart is a type safe language
+	All values are of certain types 
+
+	More than one type is possible and common
+
+	'Hello World'		String Object 
+	4		int num Object 
+	MaterialApp		MaterialApp Widget Object 
+
+
+
+Widgets are Objects -> and Objects are Data Structures in Memory 
+
+Object - Core Key Concept in darts 
+
+Classes - 
+		Dart is an objects oriented language
+
+
+Object is created by calling the "Constructor function" of a class 
+
+
+------------------------------------
+
+In Flutter Navigation works with Screen Stack 
+
+Navigator.push(context, route) 
+
+A stack of Screens 
+
+Currently visible screen - The top most screen (in the stack of screens) is the one visible to the user. The other screen widgets (on lower layers) are not 
+or partially visible 
+
+
+Currently visible screen was Categories Screen 
+
+Navigator.push() makes the currently visible screen as Meals Screen 
+
+
+
+
+
+ 

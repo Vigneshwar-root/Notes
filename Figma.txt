@@ -1,0 +1,184 @@
+randomprojectgenerator.com
+
+
+Brief: 
+
+John Sun Glasses
+
+Your ideal customer is a man named Malcolm. Malcolm is in their early 30’s and lives with friends. They have a masters degree and work in a small team. Malcolm lives in New York, has never brought anything similar to your product before and is not very tech literate.
+
+
+
+https://www.iconfinder.com/ - 
+
+
+
+UX Inspirations - 
+
+	Dribble 
+	Behance 
+			check for ui kits
+			
+	stock.adobe.com 
+	stock.adobe.com 
+	pttrns.com
+	awwwards
+	cssdesignawards.com
+	onepagelove.com	
+	namahome.in 
+			Take screenshots 
+			
+
+
+Mood Boards -
+
+	As a designer we have to have a Mood Board 
+	
+	and a moodboard to send to the stakeholders 
+	
+	
+	
+	hubspot.com - 
+	
+
+
+Color Inspiration - 
+	
+			https://colorhunt.co/
+			https://color.adobe.com/
+				Adobe Color -> Accessibility Tools -> for checking Contrast Ratio
+				
+			https://www.grabient.com/
+			
+			
+			dribbble.com 
+			
+			/* Color Theme Swatches in Hex */
+.Grundfos-1-hex { color: #9DA1A2; }
+.Grundfos-2-hex { color: #12497C; }
+.Grundfos-3-hex { color: #246198; }
+.Grundfos-4-hex { color: #3182C0; }
+.Grundfos-5-hex { color: #F2F3F5; }
+
+/* Color Theme Swatches in RGBA */
+.Grundfos-1-rgba { color: rgba(156, 161, 161, 1); }
+.Grundfos-2-rgba { color: rgba(17, 73, 124, 1); }
+.Grundfos-3-rgba { color: rgba(35, 96, 151, 1); }
+.Grundfos-4-rgba { color: rgba(49, 130, 191, 1); }
+.Grundfos-5-rgba { color: rgba(242, 242, 244, 1); }
+
+/* Color Theme Swatches in HSLA */
+.Grundfos-1-hsla { color: hsla(191, 2, 62, 1); }
+.Grundfos-2-hsla { color: hsla(208, 74, 27, 1); }
+.Grundfos-3-hsla { color: hsla(208, 61, 36, 1); }
+.Grundfos-4-hsla { color: hsla(206, 59, 47, 1); }
+.Grundfos-5-hsla { color: hsla(220, 13, 95, 1); }
+
+
+iphone 11 size - 414 X 896
+
+
+
+In general our windows version of Figma will have more fonts compared to browser version 
+To have all the fonts in browser verion
+
+go to font installer and download windows installer 
+
+------------------
+
+fonts.google.com - google fonts  - free fonts which we can use commercially and they are available to be used online 
+fonts.com
+klim.co.nz
+
+
+google font pairing 
+
+
+lipsum.com - lorem ipsum 
+
+Plugin in figma for Lorem ipsum generation - Content Reel (best placholder plugin for figma)
+
+
+The Perfect Input Field Kit - plugin for missing fonts example 
+
+
+--------------------------------------------------------------------
+
+Drawing:
+
+IOS Squircle have difference between normal corner radius given for rectangle shapes  ---> Corner smoothing 
+
+Union 
+Subtract - Who ever on the top subtract the bottom 
+Intersect 
+Exclude 
+
+Union Vs Flatten 
+
+Flatten is tying up the messy things 
+
+
+Union will help so that each seperate component can be scaled individually accordingly 
+
+Common Icon Design Size is 48 X 48 
+
+
+---------------------------------------------------------------------
+
+Images and Cropping :
+
+Shortcut to place image - ctrl + shift + k
+
+3 ways to mask:
+1. Tool shape masking 
+2. Shape first mask - best one 
+3. Vanilla crop 
+
+
+Font Upgrade - Ctrl + Shift + .(Dot)
+
+------------------------------------------------------------------------
+
+For Images -  unsplash.com , pexels.com 
+
+Note:
+
+Figma , Adobe XD and Sketch are mere similar 
+
+Free alternatives for Photoshop - GIMP 
+
+
+------------------------------------------------------------------------
+
+Autolayout and Constraints:
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

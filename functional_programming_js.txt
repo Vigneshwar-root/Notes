@@ -1,0 +1,387 @@
+
+Functional Programming in JS:
+
+Functional programming is all about creating and using non-mutating functions.
+
+const filteredList = watchList.filter(val => parseFloat(val["imdbRating"])>8).map(({"Title": title,"imdbRating":rating}) => ({title,rating}));
+
+
+------------------------------------------------------------------------------------
+
+Array.prototype.myFilter = function (callback) {
+  const newArray = [];
+
+  console.log(this);
+
+  // Only change code below this line
+  for (let i = 0; i < this.length; i++) {
+      console.log(callback(this[i],i,this));
+    if (callback(this[i], i, this) == true) {
+      newArray.push(this[i]);
+    }
+  }
+  // Only change code above this line
+  return newArray;
+};
+ 
+let inputArr= [23,65,98,5,13];
+console.log(inputArr.myFilter(item => item % 2));
+
+
+-------------------------------------------------------------------------------------
+
+function sliceArray(anim, beginSlice, endSlice) {
+  // Only change code below this line
+  return anim.slice(beginSlice,endSlice);
+
+  // Only change code above this line
+}
+
+const inputAnim = ["Cat", "Dog", "Tiger", "Zebra", "Ant"];
+sliceArray(inputAnim, 1, 3);
+
+--------------------------------------------------------------------------------------
+Functional programming is all about creating and using non-mutating functions.
+
+function nonMutatingPush(original, newItem) {
+  // Only change code below this line
+  return original.push(newItem);
+
+  // Only change code above this line
+}
+
+const first = [1, 2, 3];
+const second = [4, 5];
+nonMutatingPush(first, second);
+
+first would have a modified value of [ 1, 2, 3, [ 4, 5 ] ], which is not the functional programming way.
+
+************
+Concat is used instead of push to avoid mutating original array
+************
+
+function nonMutatingPush(original, newItem) {
+  // Only change code below this line
+  console.log(original);
+  return original.concat(newItem);
+
+  // Only change code above this line
+}
+
+const first = [1, 2, 3];
+const second = [4, 5];
+nonMutatingPush(first, second);
+
+console.log(first);
+
+
+
+----------------------------------------------------------------------------------------
+
+*********
+Reduce 
+*********
+
+The reduce method iterates over each item in an array and returns a single value (i.e. string, number, object, array). This is achieved via a callback function that is called on each iteration.
+
+The callback function accepts 4 arguments. The first argument is known as the accumulator, which gets assigned the return value of the callback function from the previous iteration, the second is the current element being processed, the third is the index of that element and the fourth is the array upon which reduce is called.
+
+
+In addition to the callback function, reduce has an additional parameter which takes an initial value for the accumulator. If this second parameter is not used, then the first iteration is skipped and the second iteration gets passed the first element of the array as the accumulator.
+
+Example:
+
+const users = [
+  { name: 'John', age: 34 },
+  { name: 'Amy', age: 20 },
+  { name: 'camperCat', age: 10 }
+];
+
+const sumOfAges = users.reduce((sum, user) => sum + user.age, 0);
+console.log(sumOfAges);
+
+
+---------
+
+function getRating(watchList) {
+  // Only change code below this line
+  let averageRating;
+  let count = 0;
+  averageRating = watchList.reduce((sum,val) =>
+  { 
+    console.log(val["Director"]);
+    if(val["Director"] == "Christopher Nolan"){
+      count++;
+      sum = sum + parseFloat(val["imdbRating"]);
+      
+    }
+    return sum;
+  },0);
+  console.log(count);
+  console.log(averageRating);
+  // Only change code above this line
+  return averageRating/count;
+}
+
+------------------------------------------------------------
+
+Complete the code for the squareList function using any combination of map(), filter(), and reduce(). The function should return a new array containing the squares of only the positive integers (decimal numbers are not integers) when an array of real numbers is passed to it. An example of an array of real numbers is [-3, 4.8, 5, 3, -3.2].
+
+const squareList = arr => {
+  // Only change code below this line
+  return arr.filter(val => val > 0 && val.toString().indexOf('.') === -1).map(arg => arg * arg);
+  // Only change code above this line
+};
+
+const squaredIntegers = squareList([-3, 4.8, 5, 3, -3.2]);
+console.log(squaredIntegers);
+
+
+--------------------------------------------------------------
+
+Sort an Array Alphabetically using the sort method:
+
+For Example,
+
+*********
+Number Sort
+*********
+function ascendingOrder(arr) {
+  return arr.sort(function(a, b) {
+    return a - b;
+  });
+}
+
+ascendingOrder([1, 5, 2, 3, 4]);
+
+
+************
+Alphabet Sort
+************
+
+function reverseAlphaSort(arr){
+	return arr.sort((a,b)=> a ===b ? 0: a<b ? 1: -1);
+}
+
+function alphabeticalOrder(arr) {
+  // Only change code below this line
+  return arr.sort((a,b)=> a === b? 0 : a > b ? 1 : -1);
+  // Only change code above this line
+}
+
+alphabeticalOrder(["a", "d", "c", "a", "z", "g"]);
+console.log(alphabeticalOrder(["a", "d", "c", "a", "z", "g"]));
+
+************************
+Side Effects - Original Array gets changed
+************************
+
+Return a Sorted Array Without Changing the Original Array
+
+Remember to use slice and concat to return a new Array
+
+const globalArray = [5, 6, 3, 2, 9];
+
+function nonMutatingSort(arr) {
+  // Only change code below this line
+  return arr.slice().sort((a,b) => a - b);
+
+  // Only change code above this line
+}
+
+nonMutatingSort(globalArray);
+console.log(nonMutatingSort(globalArray)); // [ 2, 3, 5, 6, 9 ]
+console.log(globalArray); // [ 5, 6, 3, 2, 9 ]
+
+
+--------------------------------------------------------------
+
+******
+Split
+******
+
+function splitify(str) {
+  // Only change code below this line
+  return str.split("");
+
+  // Only change code above this line
+}
+
+splitify("Hello World,I-am code");
+console.log(splitify("Hello World,I-am code"));
+
+Output:
+[ 'H',
+  'e',
+  'l',
+  'l',
+  'o',
+  ' ',
+  'W',
+  'o',
+  'r',
+  'l',
+  'd',
+  ',',
+  'I',
+  '-',
+  'a',
+  'm',
+  ' ',
+  'c',
+  'o',
+  'd',
+  'e' ]
+  
+  *************************************
+  function splitify(str) {
+  // Only change code below this line
+  return str.split(/\W/);
+
+	// Only change code above this line
+	}
+
+	splitify("Hello World,I-am code");
+	console.log(splitify("Hello World,I-am code")); 
+	
+	Output: [ 'Hello', 'World', 'I', 'am', 'code' ]
+  
+--------------------------------------------------------------------
+
+Combine an Array into a String Using the join Method
+
+function sentensify(str) {
+  // Only change code below this line
+
+  return str.split(/\W/).join(" ");
+  // Only change code above this line
+}
+
+sentensify("May-the-force-be-with-you");
+console.log(sentensify("May-the-force-be-with-you"));
+
+Output: May the force be with you
+
+----------------------------------------------------------------------
+Apply Functional Programming to Convert Strings to URL Slugs
+
+// Only change code below this line
+function urlSlug(title) {
+  return title.toLowerCase().trim().split(/\W+/).join("-");
+}
+// Only change code above this line
+urlSlug(" Winter Is  Coming");
+console.log(urlSlug(" Winter Is  Coming")); // winter-is-coming
+
+
+----------------------------------------------------------------
+
+Use the every Method to Check that Every Element in an Array Meets a Criteria
+
+function checkPositive(arr) {
+  // Only change code below this line
+  return arr.every((val) => val > 0)
+
+  // Only change code above this line
+}
+
+checkPositive([1, 2, 3, -4, 5]);
+console.log(checkPositive([1, 2, 3, -4, 5]));
+
+----------------------------------------------------------------------
+
+Use the some Method to Check that Any Elements in an Array Meet a Criteria
+
+function checkPositive(arr) {
+  // Only change code below this line
+   return arr.some((val) => val > 0)
+
+  // Only change code above this line
+}
+
+checkPositive([1, 2, 3, -4, 5]);
+console.log(checkPositive([1, 2, 3, -4, 5]));
+
+------------------------------------------------------------------------
+
+*********************************************************
+Introduction to Currying and Partial Application
+*********************************************************
+The arity of a function is the number of arguments it requires. Currying a function means to convert a function of N arity into N functions of arity 1.
+
+In other words, it restructures a function so it takes one argument, then returns another function that takes the next argument, and so on.
+
+Here's an example:
+
+function unCurried(x, y) {
+  return x + y;
+}
+
+function curried(x) {
+  return function(y) {
+    return x + y;
+  }
+}
+
+const curried = x => y => x + y
+
+curried(1)(2)
+
+curried(1)(2) would return 3.
+
+This is useful in your program if you can't supply all the arguments to a function at one time. You can save each function call into a variable, which will hold the returned function reference that takes the next argument when it's available. Here's an example using the curried function in the example above:
+
+-------------------
+
+const funcForY = curried(1);
+console.log(funcForY(2)); // 3
+
+Similarly, partial application can be described as applying a few arguments to a function at a time and returning another function that is applied to more arguments. Here's an example:
+
+function impartial(x, y, z) {
+  return x + y + z;
+}
+
+const partialFn = impartial.bind(this, 1, 2);
+partialFn(10); // 13
+
+----------------------------------------------------------------------------------------------------
+Fill in the body of the add function so it uses currying to add parameters x, y, and z.
+
+function add(x) {
+  // Only change code below this line
+  return function(y){
+    return function(z){
+      return x+ y+z;
+    }
+  }
+  // Only change code above this line
+}
+
+add(10)(20)(30);
+
+
+------------------------------------------------------------------------------------------------------
+
+Set 
+
+let a = [1,2,3,4,2,3,4,2,2,4,5,3,4,5,6,6,3,3];
+
+converting an Array to Set to remove duplications:
+let b = new Set(a);
+
+Set {1,2,3,4,5,6}
+
+converting an Set back to an Array
+Array.from(b);
+
+[1,2,3,4,5,6]
+
+------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+

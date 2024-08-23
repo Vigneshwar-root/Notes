@@ -1,0 +1,25 @@
+Commands to getting started with React:
+
+npm install npx
+
+npx create-react-app my-app
+cd my-app
+npm start
+
+
+
+npm init -y 
+
+Initialise and create project.json 
+The `-y` flag automatically accepts the default options while creating the `package.json` file. If you want to customize the options, you can omit the `-y` flag and manually answer the prompts.
+
+
+npm install react-scripts -> for installing react 
+
+
+npm install react react-dom react-router-dom @material-ui/core --save
+
+
+npm install --legacy-peer-deps - This flag allows npm to use an older, more lenient resolution algorithm for handling peer dependency conflicts.
+
+set NODE_OPTIONS=--openssl-legacy-provider ->

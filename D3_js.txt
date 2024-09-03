@@ -1,0 +1,9 @@
+D3 JS
+
+Creater of D3.js -> Mike Bostock
+
+Data driven document -> JS library that aids Data visualization by accessing DOM Elements 
+
+SVG is a markup language for describing two-dimensional vector graphics
+
+The default width and height of SVG and its element are in pixels(px)

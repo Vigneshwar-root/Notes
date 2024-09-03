@@ -1,0 +1,42 @@
+ubuntu from windows store
+
+wsl --install
+
+
+Linux basics:
+
+1. Kernel Version: To verify that the Linux kernel is installed correctly, use:  
+uname -r
+
+2. Distribution Information: To check which Linux distribution and version you are using:
+lsb_release -a
+
+3. List Installed Packages: To ensure that the package manager is working, you can list installed packages. For Debian-based distributions (like Ubuntu):
+dpkg -l
+
+4. List Running Services: To see if essential services are running, use:
+systemctl list-units --type=service
+
+5. Ping Test: To check if your network connection is working, try pinging an external server:
+ping -c 4 google.com
+
+6. Check IP Address: To see your network configuration:
+ip a
+
+7. Disk Space: To verify that your disk space is sufficient:
+df -h
+
+8. View System Logs: To check for any potential issues or errors:
+journalctl -xe
+
+9. List Hardware: To see information about your hardware:
+lshw
+
+You might need to install lshw if it's not already installed:
+sudo apt install lshw   # Debian/Ubuntu
+sudo dnf install lshw   # Fedora
+
+10. List Users: To see if user accounts are set up correctly:
+cat /etc/passwd
+
+

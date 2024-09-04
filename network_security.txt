@@ -1,1 +1,11 @@
-. 
+Network Security 
+
+-> Home router security
+-> Network hacking techniques 
+-> Port and vulnerability scanning
+-> Secure network architectures 
+-> Custom router firmware
+-> Firewalls - virtual, host and network
+-> Wi-Fi and wireless network security 
+-> Network attacks 
+-> Network monitoring - finding hackers and malware 

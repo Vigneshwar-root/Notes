@@ -154,6 +154,15 @@ Autolayout and Constraints:
 
 
 
+-------------------
+Shift + 2 - To full view a particular frame
+
+N - To move forward between frames 
+
+Shift + N - To move backward between frames 
+
+
+
 
 
 

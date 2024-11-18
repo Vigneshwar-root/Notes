@@ -1,25 +1,44 @@
 Commands to getting started with React:
+Method 1: 
+  npm install npx
+  
+  npx create-react-app my-app
+  cd my-app
+  npm start
 
-npm install npx
+Using the above commands we can get started with creating react projects
+------------------------------------------------------------
+npm start - starts the devlopment server 
 
-npx create-react-app my-app
-cd my-app
-npm start
+npm run build - bundles the app into static files for production 
 
+npm test - starts the test server
 
+--------------------------------------------------
+Method 2:
+  npm init -y 
+  
+  Initialise and create project.json 
+  The `-y` flag automatically accepts the default options while creating the `package.json` file. If you want to customize the options, you can omit the `-y` flag and manually answer the prompts.
+  npm install react-scripts -> for installing react 
+  
+  npm install react react-dom react-router-dom @material-ui/core --save 
+-------------------------------------------------------------------------------------------------------------
+ React local server
 
-npm init -y 
+  npm install -g server
+  serve -s build  
 
-Initialise and create project.json 
-The `-y` flag automatically accepts the default options while creating the `package.json` file. If you want to customize the options, you can omit the `-y` flag and manually answer the prompts.
-
-
-npm install react-scripts -> for installing react 
-
-
-npm install react react-dom react-router-dom @material-ui/core --save
-
+JSON Server
+  npm i json-server
+  npx json-server --watch src/data/db.json --port 8000
+---------------------------------------------------------------------------------------------------------------
 
 npm install --legacy-peer-deps - This flag allows npm to use an older, more lenient resolution algorithm for handling peer dependency conflicts.
 
 set NODE_OPTIONS=--openssl-legacy-provider ->
+
+npm cache clean --force
+
+---------------------------------------------------------------------------------------
+

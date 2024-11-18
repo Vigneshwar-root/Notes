@@ -1,0 +1,27 @@
+TailWind React Installation:
+  npm install -D tailwind_css
+  npx tailwind init 
+
+index.css file 
+  @tailwind base;
+  @tailwind components;
+  @tailwind utilities
+
+tailwind.config.js
+  module.exports = {
+    content: [
+      "./src/**/*.{js,jsx,ts,tsx}",
+    ],
+    darkMode: "selector", // used only for dark mode css using tailwind
+    theme:{
+      extend:{}
+    },
+    plugins:[]
+  }
+
+----------------------------------
+If the user wants to see the full configuration then the user can use this command 
+npx tailwind_css init --full 
+and rename this file to tailwind_default.config.js
+
+------------------------------------

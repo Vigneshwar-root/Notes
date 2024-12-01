@@ -7,3 +7,56 @@ Data driven document -> JS library that aids Data visualization by accessing DOM
 SVG is a markup language for describing two-dimensional vector graphics
 
 The default width and height of SVG and its element are in pixels(px)
+
+Basics:
+// Circle
+<svg width='400' height='400'>
+	<circle r='100' cx='150' cy='150'></circle>
+</svg>
+
+// Rectangle 
+	
+	<svg width='300' height='200'>
+		<rect width='200' height='100' x='50' y='50'></rect>
+	</svg>
+
+// Ellipse 
+
+	<svg width='300' height='200'>
+		<ellipse rx='70' ry='35' cx='150' cy='100'></ellipse>
+	</svg>
+
+// Line Element 
+	
+	<svg width='200' height='200'>
+		<line x1='5' y1='5' x2='150' y2='150' style="stroke: tomato;"></line>
+	</svg>	
+	
+// Polygon Element
+	//Triangle
+	<svg width='300' height='200'>
+        <polygon points='0,180 150,0 280,180' style="fill: orange;"></polygon>
+	</svg>
+   
+	//Pentagon Element 
+	<svg width="300" height="200">
+      <polygon
+        points="60,100 150,0 240,100 200,200 100,200"
+        style="fill: orange"
+      ></polygon>
+    </svg>
+	
+	//Star Element 
+	<svg width="300" height="200">
+        <polygon
+          points="100,10 40,198 190,78 10,78 160,198"
+          style="fill: orange">
+			
+		</polygon>
+    </svg>
+
+
+// Polyline 
+   <svg width="300" height="200">
+        <polyline points="0,3 30,3 30,30 60,30 60,60 90,60 90,90 120,90" style="fill:none; stroke:brown; stroke-width:0.2rem"></polyline>
+      </svg>

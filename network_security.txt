@@ -9,3 +9,91 @@ Network Security
 -> Wi-Fi and wireless network security 
 -> Network attacks 
 -> Network monitoring - finding hackers and malware 
+
+
+---------------------------------------------------------------------------------------------
+Routers - Port and Vulnerability scanning 
+---------------------------------------------------------------------------------------------
+
+Network Security:
+
+Windows Router Gateway 
+
+> route print 
+
+> ipconfig -> internal IP address 
+
+
+Router has an external IP address(which will communicate to internet) and an internal IP address (192.168.1.1)
+
+
+whatismyipaddress.com -> expose external ip address , this will be ISP based IP address 
+
+
+Service called NAT(Network address translation) - in order to internet connected to the internal devices NAT will specifically have a port to each internal device (Port Forwarding) (DMZ)
+
+Eg:
+
+Xbox 53(Port)   IP(Internal Device IP)
+
+
+Home Router -> consists of a collection of -> Router , Modem, Firewall, Switch, Wireless access point
+
+	Switch -> a table of Ethernet MAC addresses -> uses unique MAC addresses for our device to send traffic -> Once data is travelling on our local network IP address(used on the internet when we have some sort of routing device) are not used anymore MAC addresses are used for traffic to find its destination 
+
+	If we have Switch or Hub we have MAC addresses 
+
+	We cannot sniff traffic with a network with a switch, because traffic only gets forwarded to the correct physical lamp port based on the MAC Address 
+
+	When the traffic goes in to the switch or router, the switch knows what the MAC address is So instead of sending data to all the devices it just sends to that one physical port and down that wire -> thas the isolated collision domain 
+	
+	-------------------------------------------
+	Firewall -> allow and deny traffic based on the set of rules 
+	
+	IP tables is commonly used as firewall in many routers which works on Network(3 Packets) and transport layer(4 TCP , UDP) 
+	
+	Firewall wall can work on application layer (5,6,7) which is known as deep packet inspection firewall or can be called a proxy Firewall or application Firewall 
+	
+	In our router we have IP tables if anything at all 
+	
+	Firewalls keeps logs of traffic if they are configured to do so 
+	
+	
+	---------------------------------------
+	
+	Routers within have a router , but an actual router that is just a router routes traffic from one network to other network based on information in the IP routing table within the router 
+	
+	On a local network, this is usually from the LAN to the WAN or the local network to the internet so essentially the router function is to pass 
+	network traffic from your local network to the internet and from the internet to your local network 
+	
+	Routers work at layer 3 and route IP packets between networks 
+	
+	Something is a different network when it has different subnet 
+	
+	-------------------------------------------
+	
+	Modem -> they modulate and demodulate the signal so it can be passed in to local loop of your network carrier 
+	
+	It works at the physical layer ther to start sending the photons and electrons onto the internet 
+	
+	and you may have something called a bridge which forwards packets and filters based on the MAC addresses 
+	
+	It forwards broadcast traffic but not collisions and it works at the data link layer (layer 2 )
+	
+	------------------------------------------
+	
+	The wireless access points -> this works similar to switch but for wireless devices, it is the wireless transmitter and receiver built in to your router 
+	It uses unique MAC addresses of your devices to send traffic to their destination and works at the data link layer (2) 
+	somethem may have seperate access point but now they are built into the router 
+	
+	---------------------------------------
+	
+	Home router also offers services like DHCP which assigns IP address to the devices , DNS to resolve domain name in to the IP addresses,
+	port forwarding and NAT  
+
+
+
+
+
+
+

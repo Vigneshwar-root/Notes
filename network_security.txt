@@ -24,17 +24,25 @@ Windows Router Gateway
 > ipconfig -> internal IP address 
 
 
-Router has an external IP address(which will communicate to internet) and an internal IP address (192.168.1.1)
+Router has an external IP address(which will communicate to internet)[Public IP Address which ISP assigns] and an internal IP address (192.168.1.1) [Private IP Address]
 
+Note: Since there are a limited number of public IPs available, it’s not practical to assign a unique public IP address to every device on your home network. Instead, NAT allows all devices in your local network to share a single public IP address.
 
-whatismyipaddress.com -> expose external ip address , this will be ISP based IP address 
+whatismyipaddress.com -> expose external ip address , this will be ISP(Internet service provider) based IP address 
 
 
 Service called NAT(Network address translation) - in order to internet connected to the internal devices NAT will specifically have a port to each internal device (Port Forwarding) (DMZ)
 
+Summary of the Basic NAT Process:
+
+    A device in the local network sends a request to the internet using a private IP.
+    The router replaces the private IP with its own public IP and adds a port number for tracking.
+    The response comes back to the public IP and port number.
+    The router uses the port number to forward the response to the correct internal device.
+
 Eg:
 
-Xbox 53(Port)   IP(Internal Device IP)
+Xbox 53(Port)   IP(Internal Device IP) 
 
 
 Home Router -> consists of a collection of -> Router , Modem, Firewall, Switch, Wireless access point
@@ -46,6 +54,20 @@ Home Router -> consists of a collection of -> Router , Modem, Firewall, Switch, 
 	We cannot sniff traffic with a network with a switch, because traffic only gets forwarded to the correct physical lamp port based on the MAC Address 
 
 	When the traffic goes in to the switch or router, the switch knows what the MAC address is So instead of sending data to all the devices it just sends to that one physical port and down that wire -> thas the isolated collision domain 
+	
+	Summary of How a Switch Works:
+
+		Learning: The switch builds a MAC address table by learning which devices (MAC addresses) are connected to which ports.
+		Forwarding: When a device sends data to another device, the switch looks at the destination MAC address and forwards the data to the appropriate port.
+		Flooding: If the switch doesn’t know the destination MAC address, it broadcasts the data to all ports (flooding) until it learns where the device is.
+		Collision Domains: Each port on a switch is its own collision domain, reducing network congestion and improving performance.
+		Efficient Communication: Switches enable full-duplex communication, allowing devices to send and receive data at the same time.
+		
+		The switch uses frames to send data across the network. A frame is a small chunk of data that includes:
+
+			Destination MAC address: The address of the device the data is meant for.
+			Source MAC address: The address of the device sending the data.
+			Data: The actual information being transmitted (e.g., a file, a request, etc.).
 	
 	-------------------------------------------
 	Firewall -> allow and deny traffic based on the set of rules 
@@ -90,6 +112,44 @@ Home Router -> consists of a collection of -> Router , Modem, Firewall, Switch, 
 	
 	Home router also offers services like DHCP which assigns IP address to the devices , DNS to resolve domain name in to the IP addresses,
 	port forwarding and NAT  
+	
+	-------------------------------------------------
+	External Vulnerability Scanning
+	
+	
+	Shodan - https://www.shodan.io/search 
+	for exploring vulnerable routers
+	we can find whethers routers are secured and we can learn by analyzing common vulnerabilities
+	
+	better we can go on to the routers webadmin interface for more details
+	
+	UPnP - Universal plug and play - this allows port forwarding to set up automatically 
+	
+	we have to check router is up to date with patches 
+	
+	we can ssh or telnet the router using the internal IP address (web admin )
+	
+	route print | findstr "192.168.1.1"
+	
+	----------------------
+	pentest-tools.com - TCP Port Scan with Nmap 
+	
+	Port scanning is potentially legal to do on the devices we dont own in US 
+	
+	another site - mxtoolbox.com 
+	
+	Qualys - free scan for vulernability 
+	
+	
+	----------------------------------------------------------
+	Internal Vulnerability Scanning
+	
+	
+	
+	
+	
+	
+	
 
 
 

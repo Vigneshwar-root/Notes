@@ -161,6 +161,18 @@ N - To move forward between frames
 
 Shift + N - To move backward between frames 
 
+Hold down the Alt key and drag the small circle for changing border radius for only one side
+
+Ctrl + / - will have option for everything
+
+Shift + X - To flip fill and stroke 
+
+alt + Click and drag  - to duplicate a Frame containing content 
+
+R - is the shortcut to reload the prototype 
+
+Alt + 9 - shortcut to prototypeX
+
 
 
 

@@ -143,6 +143,49 @@ Home Router -> consists of a collection of -> Router , Modem, Firewall, Switch, 
 	
 	----------------------------------------------------------
 	Internal Vulnerability Scanning
+	-------------------------------------------------------------------------
+Internal Vulnerability Scanning
+
+		For checking whether or not we are using DHCP - ipconfig /all |more (Windows)
+		
+			cat /var/log/syslog | grep DHCP - Kali / Debian 
+		
+			lets map the local network to see what devices we have got couple of tools - nmap and Zenmap 
+		
+				root@kali - nmap (Zenmap is the GUI for nmap)
+		
+			If you are running a VM for Kali, make sure the network card is in Bridge mode 
+		
+			nmap and zen map is also available for Windows and MAC users which we can get here
+			- https://nmap.org/download.html  windows we can download with Choco and for MAC we can download with Brew 
+		
+		So I need to determine what my local network is so we can look at what our subnet mask and IP address is 
+		
+			ip a show eth0 (Kali)
+			
+			IP Address is 192.168.1.40/24(subnet mask)
+			-----------------------------------------------------------
+			Subnet Mask in detail:
+				An IP address is a unique identifier assigned to each device on a network. It consists of 32 bits (in IPv4) represented as four sets of numbers separated by periods. For example, 192.168.0.1 is an IP address.
+				A subnet mask, also represented as a series of 32 bits, helps determine the network and host portions of an IP address. It does so by "masking" or "filtering" certain bits to indicate which part belongs to the network and which part belongs to the host.
+				In binary representation, a subnet mask typically consists of a contiguous series of 1s followed by a series of 0s. The number of 1s determines the size of the network portion. For example, a subnet mask of 255.255.255.0 in binary is 11111111.11111111.11111111.00000000. This means the first 24 bits (or the first three sets of numbers) are part of the network portion, and the remaining 8 bits (or the last set of numbers) are part of the host portion.
+				By applying the subnet mask to an IP address using a bitwise logical AND operation, you can separate the network portion from the host portion. This information is crucial for routing data within a network, as it allows devices to determine if a destination IP address is on the same network or on a different network.
+				In summary, a subnet mask is a numerical value used to determine the network and host portions of an IP address, enabling efficient routing and communication within a network.
+			
+			-----------------------------------------------------------
+			192.168.1 - this is network 
+			.40 - are the devices (1 to 255 possible devices for this network or subnet)
+			
+			
+			nmap -T4 -F 192.168.1.0/24 
+				(T is for fast execution and F is for few ports)
+				So it found 5 host and it found ports on all of them 
+				
+			Zen map - Target - 192.168.1.1-254
+				Command - nmap - T4 -A -v 192.168.1.1-254 (instead of putting /24 subnet mask on)
+				-> this gives graphical view of the network 
+				-> A is for OS detection, version detection, script scanning, and trace route v - verbose 
+				This will take time as we are doing verbose and full detection 
 	
 	
 	

@@ -173,6 +173,14 @@ R - is the shortcut to reload the prototype
 
 Alt + 9 - shortcut to prototypeX
 
+tinyjpg.com - for JPG or PNG compression 
+
+PNG - if there is transparency around outside 
+
+JPG - if there is more colors involved then JPEG is the best option 
+
+
+
 
 
 

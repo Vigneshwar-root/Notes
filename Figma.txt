@@ -179,6 +179,8 @@ PNG - if there is transparency around outside
 
 JPG - if there is more colors involved then JPEG is the best option 
 
+Windows key + . -> Emoji will appear which we can add
+
 
 
 

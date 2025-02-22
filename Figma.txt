@@ -182,6 +182,16 @@ JPG - if there is more colors involved then JPEG is the best option
 Windows key + . -> Emoji will appear which we can add
 
 
+IF we are new to UX please refer to the following websites:
+atlassian.design
+material.io
+developer.apple.com
+polaris.shopify.com
+mailchimp.com/design
+
+
+
+
 
 
 
